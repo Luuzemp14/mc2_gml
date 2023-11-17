@@ -1,0 +1,10 @@
+services:
+  gml_hs23_mc2:
+    image: cr.gitlab.fhnw.ch/ml/courses/gml/gml_trainingcenter:v20220919_arm64
+    container_name: gml_hs23_mc2
+    user: root
+    command: "start.sh jupyter lab --LabApp.token=''"
+    ports:
+      - "8876:8888"
+    volumes:
+      - .:/home/jovyan/work/
